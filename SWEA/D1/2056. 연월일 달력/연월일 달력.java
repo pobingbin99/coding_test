@@ -15,7 +15,6 @@ class Solution {
             
             int day = date % 100;
             int month = (date / 100) % 100;
-            int year = (date / 10000);
             
             System.out.print("#" + test_case + " " );
             if (month >= 1 && month <= 12) {

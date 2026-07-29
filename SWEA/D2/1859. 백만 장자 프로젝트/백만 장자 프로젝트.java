@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+class Solution {
+	public static void main(String args[]) throws Exception {
+		Scanner sc = new Scanner(System.in);
+		int T = sc.nextInt();
+
+		for (int test_case = 1; test_case <= T; test_case++) {
+			int size = sc.nextInt();
+	      int[] arr = new int[size];
+            
+        for (int i = 0; i < size; i++) {
+	        arr[i] = sc.nextInt();   
+        }
+            
+        long sum = 0;
+        int max = arr[size -1];
+            
+        for (int i = size - 1; i >= 0; i--) {
+	        if (max > arr[i]) {
+	          sum += (max - arr[i]);
+          } else {
+	          max = arr[i];
+          }
+        }
+            
+        System.out.println("#" + test_case + " " +sum);
+		}
+	}
+}

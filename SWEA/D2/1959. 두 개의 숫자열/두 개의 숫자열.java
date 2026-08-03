@@ -30,7 +30,7 @@ class Solution {
                 arrLong = tempArr;
             }
             
-            int max = 0;
+            int max = Integer.MIN_VALUE;
             for (int i = 0; i <= (M-N); i++) {
              	int sum = 0;
                 for (int j = 0; j < N; j++) {

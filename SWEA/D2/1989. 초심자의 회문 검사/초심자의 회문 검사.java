@@ -7,8 +7,17 @@ class Solution {
 
 		for (int tc = 1; tc <= T; tc++){
 			String str = sc.nextLine();
-            String reverseStr = new StringBuilder(str).reverse().toString();
-            System.out.println("#" + tc + " " + (str.equals(reverseStr) ? 1 : 0));
+            int len = str.length();
+            
+            int ans = 1;
+            for (int i = 0; i <(len/2); i++) {
+             	if (str.charAt(i) != str.charAt(len -1 -i)) {
+                	ans = 0;
+                    break;
+                }
+            }
+            
+            System.out.println("#" + tc + " " + ans);
 		}
 	}
 }
